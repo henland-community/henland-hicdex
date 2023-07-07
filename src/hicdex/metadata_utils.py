@@ -104,7 +104,7 @@ async def get_or_create_tag(tag: str) -> models.TagModel:
 async def get_metadata(ctx: DipDupContext, token: models.Token) -> Dict[str, Any]:
     # FIXME: hard coded contract
     metadata_datasource = ctx.get_metadata_datasource('metadata')
-    try:
+    try: # KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton -> Hic et Nunc OBJKTs
         metadata = await metadata_datasource.get_token_metadata('KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton', token.id)
         if metadata is not None:
             _logger.info(f'found metadata for {token.id} from metadata_datasource')
@@ -127,7 +127,7 @@ async def fetch_metadata_bcd(ctx: DipDupContext, token: models.Token) -> Dict[st
     api = ctx.get_http_datasource('bcd')
     try:
         data = await api.request(
-            method='get',
+            method='get', # KT1Hkg5qeNhfwpKW4fXvq7HGZB9z2EnmCCA9 -> Hic et Nunc Marketplace Legacy
             url=f'tokens/mainnet/metadata?contract:KT1Hkg5qeNhfwpKW4fXvq7HGZB9z2EnmCCA9&token_id={token.id}',
             weight=1,  # ratelimiter leaky-bucket drops
         )

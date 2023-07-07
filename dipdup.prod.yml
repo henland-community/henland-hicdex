@@ -1,4 +1,4 @@
-database:
+database: # see docker-compose.yml 's db defined
   kind: postgres
   host: db
   port: 5432

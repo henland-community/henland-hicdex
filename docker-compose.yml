@@ -8,6 +8,7 @@ services:
     volumes:
       - ./dipdup.yml:/home/dipdup/dipdup.yml
       - ./dipdup.prod.yml:/home/dipdup/dipdup.prod.yml
+      - ./tmp:/tmp
     command: ["-c", "dipdup.yml", "-c", "dipdup.prod.yml", "run"]
     restart: unless-stopped
     environment:

@@ -2,7 +2,9 @@
 
 an indexer for hicetnunc objkts based on [dipdup](https://dipdup.net/) by [Baking Bad](https://baking-bad.org/)
 
-## 配置文件修改
+## 1 配置文件修改
+
+> 修改数据库密码等信息
 
 - dipdup.dev.yml
 
@@ -10,7 +12,7 @@ an indexer for hicetnunc objkts based on [dipdup](https://dipdup.net/) by [Bakin
 
 - docker-compose.yml
 
-## hicdex 服务构建与运行
+## 2 hicdex 服务构建与运行
 
 - 更新代码
 

@@ -6,10 +6,10 @@ services:
     depends_on:
       - db
     volumes:
-      - ./dipdup.yml:/home/dipdup/dipdup.yml
-      - ./dipdup.prod.yml:/home/dipdup/dipdup.prod.yml
+      - ./dipdup_hicdex.yml:/home/dipdup/dipdup_hicdex.yml
+      - ./dipdup_srv.prod.yml:/home/dipdup/dipdup_srv.prod.yml
       - ./tmp:/tmp
-    command: ["-c", "dipdup.yml", "-c", "dipdup.prod.yml", "run"]
+    command: ["-c", "dipdup_hicdex.yml", "-c", "dipdup_srv.prod.yml", "run"]
     restart: unless-stopped
     environment:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
